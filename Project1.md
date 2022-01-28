@@ -163,7 +163,7 @@
 `$ sudo systemctl reload apache2`
 
 ![Image22](./Images/Image22.PNG)
-![image21](./Images/Image21.PNG)
+![image21](./Images/image21.PNG)
 
 ### The output shows that PHP installation is working as expected
 
