@@ -133,3 +133,38 @@
 
 ![Image19](./Images/Image19.PNG)
 
+## Step 5 - Enable PHP on the website
+
+### We needed to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive so as to allow the php page be the landing page
+
+`sudo vim /etc/apache2/mods-enabled/dir.conf`
+
+`<IfModule mod_dir.c>
+        #Change this:
+        #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+        #To this:
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>`
+
+![Image20](./Images/Image20.PNG)
+
+### Create a new file named index.php inside your custom web root folder:
+
+`$ vim /var/www/projectlamp/index.php`
+
+### The following text which is a valid PHP code was added inside the just created file
+
+`<?php
+
+`phpinfo();`
+
+### Reloaded apache for changes to take place
+
+`$ sudo systemctl reload apache2`
+
+![Image22](./Images/Image22.PNG)
+![image21](./Images/Image21.PNG)
+
+### The output shows that PHP installation is working as expected
+
+![Image23](./Images/Image23.PNG)
