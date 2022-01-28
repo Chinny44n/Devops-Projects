@@ -16,3 +16,15 @@
 `sudo systemctl status apache2`
 
 ![Image3](./Images/Image3.PNG)
+
+### Opened TCP port 80 in the EC2 Instance which is the default port that web browsers use to access web pages on the Internet
+
+![Image4](./Images/Image4.PNG)
+
+### This output confirms access to Apache2 Locally
+
+![Image5](./Images/Image5.PNG)
+
+### Test page showing Apache server is running over the browser.
+
+![Image6](./Images/Image6.PNG)
