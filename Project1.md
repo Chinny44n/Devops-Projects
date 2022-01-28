@@ -56,4 +56,10 @@
 
 `$ sudo apt install php libapache2-mod-php php-mysql`
 
-![Image11](./Images/Image11.PNG)
+![Image11](./Images/image11.PNG)
+
+### The following command confirms the PHP Version
+
+`$ php -v`
+
+![Image12](./Images/Image12.PNG)
