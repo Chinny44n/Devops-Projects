@@ -21,6 +21,7 @@
 
 ![Image4](./Images/Image4.PNG)
 
+
 ### This output confirms access to Apache2 Locally
 
 ![Image5](./Images/Image5.PNG)
@@ -28,3 +29,23 @@
 ### Test page showing Apache server is running over the browser.
 
 ![Image6](./Images/Image6.PNG)
+
+# Step 2-Installing MySQL
+### The following command installs the MySQL in the server. (The result shows it has already beem installed as this is a rework of Project 1)
+
+`$ sudo apt install mysql-server`
+
+![Image7](./Images/Image7.PNG)
+
+### The following command runs a security script that removes sime insecure default settings and lock down access to the database system
+
+`$ sudo mysql_secure_installation`
+
+![Image8](./Images/Image8.PNG)
+![Image9](./Images/Image9.PNG)
+
+### This code verifies that we can log in to the MySQL server
+
+`$ sudo mysql`
+
+![Image10](./Images/Image10.PNG)
