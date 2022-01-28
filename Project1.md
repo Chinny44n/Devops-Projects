@@ -70,4 +70,66 @@
 
 ### Created a directory for projectlamp using ‘mkdir’ command
 
-`$ sudo mkdir /var/www/projectlamp`
+`$ sudo mkdir /var/www/projectlamp2chinwe`
+
+### Assigned ownership to the directory with this variable $USER which still referenced the system user
+
+`$ sudo chown -R $USER:$USER /var/www/projectlamp2chinwe`
+
+### Created and opened a new configuration file in Apache’s sites-available directory using "vi" command-line editor
+
+`$ sudo vi /etc/apache2/sites-available/projectlamp2chinwe.conf`
+
+### Pasted the below bare-bones configuration by hitting on i on the keyboard to enter the insert mode, and pasted the text:
+
+`<VirtualHost *:80>
+    ServerName projectlamp
+    ServerAlias www.projectlamp 
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/projectlamp
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>`
+
+### To save and close the file, simply follow the steps below:
+- Hit the esc button on the keyboard
+- Type :
+- Type wq. w for write and q for quit
+- Hit ENTER to save the file
+
+### Used the below cmdlet to show the new file we created in the sites-available directory
+
+`$ sudo ls /etc/apache2/sites-available`
+
+### See screenshot of the above cmds ran
+
+![Image15a](./Images/Image15a.PNG)
+
+### Enabled the new virtualhost created with the below
+
+`$ sudo a2ensite projectlamp`
+
+### Disabled the default website that comes installed with Apache with the below (The screenshot shows "already disabled" as this is a re-work)
+
+`$ sudo dissite 000-default`
+
+![image17](./Images/image17.PNG)
+
+### Ran the below cmd to make sure the config file does not contain any syntax error
+
+`$ sudo apache2ctl configtest`
+
+### Used the below to reload Apache so the changes can take effect
+
+`$ sudo systemctl reload apache2`
+
+![image18](./Images/image18.PNG)
+
+### Created an index.html file in the /var/www/projectlamp2chinwe location for testing if the virtual host works fine
+
+`sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp2chinwe/index.html`
+
+### The below screen shot is the output which shows Virtual host is working properly
+
+![Image19](./Images/Image19.PNG)
+
