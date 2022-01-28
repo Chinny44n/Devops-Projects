@@ -48,7 +48,7 @@
 
 `$ sudo mysql`
 
-![Image10](./Images/Image10.PNG)
+![Image10](./Images/image10.PNG)
 
 # Step 3-Installing PHP
 
@@ -63,3 +63,11 @@
 `$ php -v`
 
 ![Image12](./Images/Image12.PNG)
+
+### LAMP stack has been installed completely and it is operational
+
+### Step 4 - Creating a Virtual Host for your Website using Apache 2
+
+### Created a directory for projectlamp using ‘mkdir’ command
+
+`$ sudo mkdir /var/www/projectlamp`
