@@ -50,3 +50,10 @@
 
 ![Image10](./Images/Image10.PNG)
 
+# Step 3-Installing PHP
+
+### The following command installs php , libapache2-mod-php and php-mysql
+
+`$ sudo apt install php libapache2-mod-php php-mysql`
+
+![Image11](./Images/Image11.PNG)
